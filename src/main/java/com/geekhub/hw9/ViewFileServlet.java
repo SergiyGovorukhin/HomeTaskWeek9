@@ -1,4 +1,4 @@
-package com.geekhub.hw8;
+package com.geekhub.hw9;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/file/remove")
-public class RemoveFileServlet extends HttpServlet {
+@WebServlet("/file/view")
+public class ViewFileServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
