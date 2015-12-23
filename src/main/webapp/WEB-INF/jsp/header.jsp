@@ -1,16 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
   User: Ghost
-  Date: 20.12.2015
-  Time: 15:29
+  Date: 22.12.2015
+  Time: 19:58
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Remote File Manager</title>
-</head>
-<body>
-    Hello!
-</body>
-</html>
+
+ <h1 align="center">Remote File Manager</h1>
