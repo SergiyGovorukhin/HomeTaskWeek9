@@ -10,9 +10,8 @@ public class AppContextListener implements ServletContextListener{
 
     @Override
     public void contextInitialized(ServletContextEvent event) {
-        System.out.println("ServletContextListener started");
         ServletContext context = event.getServletContext();
-        context.setAttribute("ctx", context.getContextPath());
+        context.setAttribute("context", context.getContextPath());
     }
 
     @Override

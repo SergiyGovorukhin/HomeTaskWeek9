@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.nio.file.DirectoryNotEmptyException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,12 +15,18 @@ import java.nio.file.Paths;
 public class RemoveFileServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String parameter = req.getParameter("path");
         Path path = Paths.get(parameter);
         String result = "";
-        if (Files.deleteIfExists(path)) {
-            result = "deleted successfully!";
+        try {
+            if (Files.deleteIfExists(path)) {
+                result = String.format("File \"%s\" deleted!", path.getFileName());
+            }
+        } catch (DirectoryNotEmptyException e) {
+            result = "Directory is not empty!";
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         req.getSession().setAttribute("deleted", result);
         req.getSession().setAttribute("path", path.getParent().toString());

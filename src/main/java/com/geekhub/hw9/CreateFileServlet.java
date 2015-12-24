@@ -31,7 +31,6 @@ public class CreateFileServlet extends HttpServlet {
         } catch (IOException x) {
             result = String.format("Error creating file \"%s\" !", filename);
         }
-        //req.getSession().setAttribute("path", path.toString());
         req.getSession().setAttribute("created", result);
         resp.sendRedirect("/dir/view");
     }
