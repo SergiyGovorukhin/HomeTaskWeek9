@@ -1,0 +1,62 @@
+table, tr, td {
+    background-color: #BCD2EE;
+    width: 800px;
+    margin: auto;
+}
+
+input[type=submit] {
+    background: none;
+    padding: 0;
+    border: none;
+    color: #0000FF;
+    font: 100% Arial;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    color: #D02090;
+}
+input[type=submit].dir {
+    color: #B03060;
+    font-weight: bold;
+}
+
+.row {
+    background-color: white;
+    padding: 5px;
+    border: solid 1px black;
+    height: 15px;
+}
+.menu {
+    background: #EED5B7;
+    padding: 5px 20px 5px 5px;
+    border: solid 1px black;
+}
+.path{
+    background: #BCD2EE;
+}
+
+.message {
+    background-color: lightgoldenrodyellow;
+    color: green;
+    text-align: center;
+    padding: 2px 5px;
+    border: solid 1px green;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #e3e3e3;
+    padding: 5px 20px;
+    border: solid 1px cornflowerblue;
+}
+
+.copy {
+    color: gray;
+    font-style: italic;
+    font-size: small;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
